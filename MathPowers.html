@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Setting a default value to a function parameter.</p>
+<p id="demo"></p>
+
+<script>
+function sumPowers(k) {
+	var n = k % 10;
+	var sum = 0;
+     var i;
+	for(i=1;i<=n;i++) {
+		sum += i*Math.pow(10,n-i);
+	}
+	return sum;
+}
+function run(){
+  val = document.getElementById("val").value;
+  document.getElementById("results").innerHTML=val+": "+sumPowers(val)
+  }
+</script>
+<input id="val">
+<input type="Submit" onclick="run();">
+<p id="results"></p>
+</body>
+</html>
+
